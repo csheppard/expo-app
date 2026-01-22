@@ -11,17 +11,17 @@ export default function ModalScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedView style={styles.buttonContainer}>
           <RectButton style={styles.button} onPress={() => router.back()}>
-            <ThemedText>Go back</ThemedText>
+            <ThemedText>❗️ Go back</ThemedText>
           </RectButton>
           <RectButton style={styles.button} onPress={() => router.back()}>
-            <ThemedText>Go back</ThemedText>
+            <ThemedText>✅ Go back</ThemedText>
           </RectButton>
         </ThemedView>
       </ThemedView>
 
       <ThemedView style={styles.bottomContainer}>        
         <RectButton style={styles.button} onPress={() => router.back()}>
-          <ThemedText>❗️ go back</ThemedText>
+          <ThemedText>❗️ Go back</ThemedText>
         </RectButton>
       </ThemedView>
     </ThemedView>

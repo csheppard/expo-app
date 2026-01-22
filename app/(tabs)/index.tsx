@@ -15,13 +15,11 @@ export default function HomeScreen() {
   return (
     <ThemedView style={styles.titleContainer}>
       <ThemedView style={styles.buttonContainer}>
-        <Link href="/explore" asChild>
-          <RectButton style={styles.button}>
-            <ThemedText>❗️ propagated</ThemedText>
-          </RectButton>
+        <Link href="/explore" style={styles.button}>
+          <ThemedText>❗️ Propagated</ThemedText>
         </Link>
         <RectButton onPress={() => router.push('/explore')} style={styles.button}>
-          <ThemedText>✅ good</ThemedText>
+          <ThemedText>✅ Good</ThemedText>
         </RectButton>
       </ThemedView>
 
@@ -45,10 +43,10 @@ export default function HomeScreen() {
             <ThemedView style={styles.titleContainer}>
               <ThemedView style={styles.buttonContainer}>
                 <RectButton style={styles.button} onPress={onClose}>
-                  <ThemedText>❗️ close modal</ThemedText>
+                  <ThemedText>❗️ Close modal</ThemedText>
                 </RectButton>
                 <RectButton style={styles.button} onPress={onClose}>
-                  <ThemedText>✅ close modal</ThemedText>
+                  <ThemedText>✅ Close modal</ThemedText>
                 </RectButton>
               </ThemedView>
             </ThemedView>
@@ -56,7 +54,7 @@ export default function HomeScreen() {
 
           <ThemedView style={styles.bottomContainer}>        
             <RectButton style={styles.button} onPress={onClose}>
-              <ThemedText>❗️ close modal</ThemedText>
+              <ThemedText>❗️ Close modal</ThemedText>
             </RectButton>
           </ThemedView>
         </ThemedView>
