@@ -1,29 +1,55 @@
-import { Link } from 'expo-router';
+import { router } from 'expo-router';
 import { StyleSheet } from 'react-native';
 
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
+import { RectButton } from 'react-native-gesture-handler';
 
 export default function ModalScreen() {
   return (
-    <ThemedView style={styles.container}>
-      <ThemedText type="title">This is a modal</ThemedText>
-      <Link href="/" dismissTo style={styles.link}>
-        <ThemedText type="link">Go to home screen</ThemedText>
-      </Link>
+    <ThemedView style={styles.modalOverlay}>
+      <ThemedView style={styles.titleContainer}>
+        <ThemedView style={styles.buttonContainer}>
+          <RectButton style={styles.button} onPress={() => router.back()}>
+            <ThemedText>Go back</ThemedText>
+          </RectButton>
+          <RectButton style={styles.button} onPress={() => router.back()}>
+            <ThemedText>Go back</ThemedText>
+          </RectButton>
+        </ThemedView>
+      </ThemedView>
+
+      <ThemedView style={styles.bottomContainer}>        
+        <RectButton style={styles.button} onPress={() => router.back()}>
+          <ThemedText>❗️ go back</ThemedText>
+        </RectButton>
+      </ThemedView>
     </ThemedView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  modalOverlay: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
   },
-  link: {
-    marginTop: 15,
-    paddingVertical: 15,
+  buttonContainer: {
+    flexDirection: 'row',
+    gap: 16,
+  },
+  button: {
+    backgroundColor: 'grey',
+    padding: 10,
+    borderRadius: 5,
+    flex: 1,
+  },
+  titleContainer: {
+    padding: 28,
+    gap: 16
+  },
+  bottomContainer: {
+    flex: 1,
+    alignItems: 'flex-end',
+    flexDirection: 'row',
+    paddingLeft: "50%"
   },
 });
